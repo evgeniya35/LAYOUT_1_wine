@@ -1,7 +1,9 @@
-from http.server import HTTPServer, SimpleHTTPRequestHandler
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 import datetime
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+
 import pandas as pd
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+
 
 
 def age_winery(start_wine=None):  # костыль...
