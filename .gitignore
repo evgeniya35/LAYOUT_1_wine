@@ -2,6 +2,6 @@ env/
 .vscode/
 .replit/
 index.html
-t.py
+temp*.py
 *.xlsx
 
