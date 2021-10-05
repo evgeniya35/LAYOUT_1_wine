@@ -6,7 +6,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
 
-def age_winery(start_wine=None):  # костыль...
+def age_calculatuon(start_wine=None):  # костыль...
     if start_wine is None:
         start_wine = datetime.datetime(year=1920, month=1, day=1)
     duration = datetime.datetime.today() - start_wine
@@ -39,7 +39,7 @@ env = Environment(
 
 template = env.get_template("template.html")
 render_page = template.render(
-    years=age_winery(),
+    years=age_calculatuon(),
     wines=wines
     )
 
