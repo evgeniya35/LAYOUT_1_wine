@@ -19,7 +19,7 @@ def calc_age():
         else:
             return str(age) + " года"
 
-    
+
 def main(path_xlsx="wine3.xlsx"):
     df = pd.read_excel(
         path_xlsx,
@@ -57,7 +57,7 @@ if __name__ == "__main__":
         "--wine",
         type=str,
         default="wine3.xlsx",
-        help="use --wine for path xlsx file (default: current folder wine3.xlsx)"
+        help="use --wine for path xlsx file (default: wine3.xlsx)"
         )
     args = parser.parse_args()
     path = args.wine
