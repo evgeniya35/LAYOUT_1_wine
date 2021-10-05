@@ -6,11 +6,8 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
 
-def age_calculatuon(start_wine=None):  # костыль...
-    if start_wine is None:
-        start_wine = datetime.datetime(year=1920, month=1, day=1)
-    duration = datetime.datetime.today() - start_wine
-    age = duration.days // 365
+def calc_age(): 
+    age = datetime.datetime.today().year - 1920
     k = age % 10
     if (age > 9) and (age < 20) or (age > 110) or (k > 4) or (k == 0):
         return str(age) + " лет"
@@ -19,6 +16,7 @@ def age_calculatuon(start_wine=None):  # костыль...
             return str(age) + " год"
         else:
             return str(age) + " года"
+
 
 df = pd.read_excel(
     "wine3.xlsx",
@@ -39,7 +37,7 @@ env = Environment(
 
 template = env.get_template("template.html")
 render_page = template.render(
-    years=age_calculatuon(),
+    years=calc_age(),
     wines=wines
     )
 
