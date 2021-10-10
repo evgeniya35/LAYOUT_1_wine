@@ -25,7 +25,7 @@ python main.py
 
 ### Как работает
 
-Программа `main.py` создается файл `index.html`. 
+Программа `main.py` создает файл `index.html`. 
 Входные данные `wine.xlsx`. По умолчанию `main.py` загружает данные из текущего каталога. Для указания источника данных используйте:
 ```bash
 python main.py --wine C:\Temp\upload\wine3.xlsx
